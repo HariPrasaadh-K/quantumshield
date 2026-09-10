@@ -1,0 +1,9 @@
+{
+  "name": "quantumshield-demo-project",
+  "version": "1.0.0",
+  "description": "Demo project with cryptographic primitives",
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}

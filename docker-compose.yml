@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:////app/quantumshield.db
+    volumes:
+      - ./backend/data:/app/data
+      - ./backend/tmp_uploads:/app/tmp_uploads
+      - ./backend/generated_reports:/app/generated_reports
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
